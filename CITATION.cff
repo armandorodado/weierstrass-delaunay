@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below, together with the corresponding paper."
+title: "weierstrass-delaunay: code and formal proofs for the Weierstrass-Delaunay cell decomposition of genus-two and hyperelliptic moduli spaces"
+type: software
+authors:
+  - family-names: "Rodado Amaris"
+    given-names: "Armando"
+    affiliation: "Centre for Quantum Software and Information, University of Technology Sydney"
+    email: "armando@rodadolab.com"
+doi: "10.5281/zenodo.23870957"
+license: MIT
+repository-code: "https://github.com/armandorodado/weierstrass-delaunay"
+keywords:
+  - Riemann surfaces
+  - hyperelliptic curves
+  - Delaunay decomposition
+  - moduli space
+  - Lean 4
+version: "1.0.0"
+date-released: "2026-11-01"

@@ -1,0 +1,31 @@
+{
+  "title": "weierstrass-delaunay: code and formal proofs for the Weierstrass-Delaunay cell decomposition of genus-two and hyperelliptic moduli spaces",
+  "upload_type": "software",
+  "description": "Code and formal proofs accompanying a series of papers on the Weierstrass-Delaunay cell decomposition of the moduli space of genus-two Riemann surfaces and of the hyperelliptic locus in every genus. Contents: a Lean 4 formalization of the classification of six-vertex sphere triangulations, their automorphism groups and the Whitehead-move orbit (Paper 1); a verification script reproducing every enumeration of Paper 1; and a script that enumerates all realizable Delaunay cells of the hyperelliptic locus and checks the orbifold Euler characteristic and rational homology of the resulting cell complex in genus 2 and 3 (Paper 5).",
+  "creators": [
+    {
+      "name": "Rodado Amaris, Armando",
+      "affiliation": "Centre for Quantum Software and Information, University of Technology Sydney"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Riemann surfaces",
+    "genus two",
+    "hyperelliptic curves",
+    "Weierstrass points",
+    "Delaunay decomposition",
+    "moduli space",
+    "Teichmüller space",
+    "circle patterns",
+    "Lean 4",
+    "formal verification"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://minerva-access.unimelb.edu.au/items/db3ae682-386e-51d5-87cb-d755f4d0cb96",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-thesis"
+    }
+  ]
+}

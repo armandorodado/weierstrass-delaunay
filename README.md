@@ -1,5 +1,7 @@
 # weierstrass-delaunay
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23870957.svg)](https://doi.org/10.5281/zenodo.23870957)
+
 Code and formal proofs for the **Weierstrass–Delaunay cell decomposition** of the
 moduli space of genus-two Riemann surfaces and of the hyperelliptic locus in every
 genus.
@@ -109,6 +111,21 @@ If you use this code, please cite the corresponding paper:
              of Closed Genus-Two {R}iemann Surfaces},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2026}
+}
+```
+
+the software itself (this DOI always resolves to the latest version):
+
+```bibtex
+@software{RodadoAmaris-weierstrass-delaunay,
+  author    = {Rodado Amaris, Armando},
+  title     = {weierstrass-delaunay: code and formal proofs for the
+               {W}eierstrass--{D}elaunay cell decomposition of genus-two and
+               hyperelliptic moduli spaces},
+  publisher = {Zenodo},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23870957},
+  url       = {https://github.com/armandorodado/weierstrass-delaunay}
 }
 ```
 
