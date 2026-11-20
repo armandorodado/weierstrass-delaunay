@@ -16,5 +16,7 @@ keywords:
   - Delaunay decomposition
   - moduli space
   - Lean 4
-version: "1.0.0"
-date-released: "2026-11-01"
+  - circle patterns
+  - polytopes
+version: "1.1.0"
+date-released: "2026-11-21"

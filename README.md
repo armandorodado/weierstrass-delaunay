@@ -24,6 +24,7 @@ author's PhD thesis (University of Melbourne, 2007).
 | Folder | Paper | What it checks |
 |---|---|---|
 | [`paper1-genus2-combinatorics/`](paper1-genus2-combinatorics/) | *Delaunay Combinatorics of the Moduli and Teichmüller Space of Closed Genus-Two Riemann Surfaces* | Lean 4 formalization of the classification, automorphism groups and flip orbit; all enumerations of the paper |
+| [`paper2-circle-pattern-systems/`](paper2-circle-pattern-systems/) | *Circle-Pattern Linear Systems for the Twenty Trivalent Delaunay Types of a Genus-Two Surface: Rank, Feasibility and Polytope Dimension* | Lean 4 formalization of the rank, infeasibility, forced coordinates, dimensions, vertices and facets of the twenty angle systems; independent check of every finite statement of the paper |
 | [`paper5-hyperelliptic-genus-g/`](paper5-hyperelliptic-genus-g/) | *Face-Constraint Independence, a Hall Criterion, and the Combinatorial Immersion C<sub>g−1</sub> → C<sub>g</sub> for Hyperelliptic Surfaces of Arbitrary Genus* | Euler characteristic and rational homology of the cell decomposition of the hyperelliptic locus, genus 2 and 3 |
 
 ## Requirements
@@ -73,6 +74,39 @@ side and independently of the paper's own programs:
 | realizable types: trivalent; all; per hierarchy level | 10; 116; 2, 5, 13, 12, 6, 2, 1 |
 | explicit stacked configuration (Prop. 7.3, §7.4, Lemma 7.5) | cone angles, Delaunay criterion, perfect matching, symmetry |
 
+## Paper 2: circle-pattern linear systems
+
+```bash
+cd paper2-circle-pattern-systems
+lean Paper2CirclePatterns.lean      # about 15 s; no output means every theorem checked
+python3 paper2_verification.py      # about 25 s; ends with "ALL CHECKS PASSED"
+```
+
+For each of the twenty trivalent Delaunay types, the angle system is A x = 1, x ≥ 0, where A is
+the vertex–edge incidence matrix of the dual triangulation T (a loop counts 2).
+
+**`Paper2CirclePatterns.lean`** (Section 10.2 of the paper) proves:
+
+- rank A = 6 for all twenty types (Theorem 3.2);
+- the type of signature (2,2,2,2,8,8) is infeasible, and the forced coordinates of the nine
+  lower-dimensional types (Table 2), by `omega`, checked by the kernel;
+- the exact dimension of every polytope: 6 for ten types, 1–3 for nine (Theorem 4.3);
+- every vertex is half-integral, and the vertex counts and (m,h) distributions (Theorem 7.1, Table 3);
+- the facet and admissible-edge counts, and that every facet is at a Whitehead-admissible edge
+  (Table 4, Theorem 8.3).
+
+**`paper2_verification.py`** (Section 10.1) recomputes everything from scratch, independently of the
+paper's tables:
+
+| Check | Value |
+|---|---|
+| trivalent types; abstractly isomorphic pairs | 20; {11,12}, {16,17}, {18,19} |
+| polytope dimensions | 6 (ten types), 1, 2, 3 (nine types), empty (one type) |
+| vertices | half-integral; 12, 9, 7, 4, 8, 3, 7, 8, 2, 2, 2, 4, 8, 7, 0, 2, 3, 9, 2, 11 |
+| facets of the ten full-dimensional types | 85, all at admissible edges; 13 of 98 admissible edges are not facets |
+| facet orbits under the automorphism groups | 52, paired into 26 walls |
+| free unfolding from the cube | 1, 12, 108, 828, 6012, …; growth rate 7.0928 |
+
 ## Paper 5: the hyperelliptic locus in genus *g*
 
 ```bash
@@ -111,6 +145,18 @@ If you use this code, please cite the corresponding paper:
              of Closed Genus-Two {R}iemann Surfaces},
   journal = {arXiv preprint arXiv:XXXX.XXXXX},
   year    = {2026}
+}
+```
+
+For Paper 2:
+
+```bibtex
+@article{RodadoAmaris-circlepatterns,
+  author  = {Rodado Amaris, Armando},
+  title   = {Circle-Pattern Linear Systems for the Twenty Trivalent {D}elaunay Types
+             of a Genus-Two Surface: Rank, Feasibility and Polytope Dimension},
+  year    = {2026},
+  note    = {Preprint}
 }
 ```
 
